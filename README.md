@@ -32,5 +32,19 @@ Does this linear model predict mpg of MechaCar prototypes effectively? Why or wh
 
 R-squared value is 0.6825 which means that roughly 68.25% of the variability of dependent variable 'mpg' is explained using this model.
 
+### Summary Statistics on Suspension Coils
+
+ To determine if the manufacturing process is consistent across production lots, weight capacities of multiple suspension coils were tested.
+
+The following metrics mean, median, variance, and standard deviation were calculated.
+- For PSI column
+![Getting Started](./2.png)
+
+- For each manufacturing lot
+![Getting Started](./1.png)
+
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
+
+The variance for PSI column in total is 62.29. So, the current manufacturing data meet this design specifications for all manufacturing lot in total. However for Manufacturing Lot 3, the variance is high i.e. 170.29 which is greater than the design specification standard. 
 
 
