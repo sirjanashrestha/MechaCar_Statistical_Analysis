@@ -12,25 +12,20 @@ Tools used: R Studio
 Source of data: MechaCar_mpg_csv, Suspension_Coil.csv
 
 ### Linear Regression to Predict MPG
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 
 Our multiple linear regression statement is;
 lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD, data=Mechacardf)
 
-In the summary output we can see that, spoiler_angle and vehicle_length have a significant impact on mpg values. In other words, these two variables provided a non-random amount of variance to the mpg values in the dataset.
+- In the summary output we can see that, spoiler_angle and vehicle_length have a significant impact on mpg values. In other words, these two variables provided a non-random amount of variance to the mpg values in the dataset.
 
-![Getting Started](./3.png)
+![Getting Started](./images/3.png)
 
-The linear regression model of our dataset is;
+- The linear regression model of our dataset is;
 mpg=9.56(vehicle_length)+1.81(vehicle_weight)+1.03(spoiler_angle)+6.55(ground_clearance)-1.35(AWD)-6.559
 
-Is the slope of the linear model considered to be zero? Why or why not?
+- P value of our linear regression analysis is 5.35e-11 which is smaller than our assumed significance of 0.05%. Therefore there is sufficient evidence to reject our null hypothesis, which means that the slope our linear model is not zero.
 
-P value of our linear regression analysis is 5.35*10^(-11) which is smaller than our assumed significance of 0.05%. Therefore there is sufficient evidence to reject our null hypothesis, which means that the slope our linear model is not zero.
-
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-
-R-squared value is 0.6825 which means that roughly 68.25% of the variability of dependent variable 'mpg' is explained using this model.
+- Multiple R-square in 0.7149 which means that roughly 71.49% of the variability of dependent variable 'mpg' is explained using this model. Adjusted R-squared in 0.6825 
 
 ### Summary Statistics on Suspension Coils
 
@@ -38,13 +33,26 @@ R-squared value is 0.6825 which means that roughly 68.25% of the variability of 
 
 The following metrics mean, median, variance, and standard deviation were calculated.
 - For PSI column
-![Getting Started](./2.png)
+![Getting Started](./images/2.png)
 
 - For each manufacturing lot
-![Getting Started](./1.png)
+![Getting Started](./images/1.png)
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
 
-The variance for PSI column in total is 62.29. So, the current manufacturing data meet this design specifications for all manufacturing lot in total. However for Manufacturing Lot 3, the variance is high i.e. 170.29 which is greater than the design specification standard. 
+- The variance for PSI column in total is 62.29. So, the current manufacturing data meet this design specifications for all manufacturing lot in total. However for Manufacturing Lot 3, the variance is high i.e. 170.29 which is greater than the design specification standard. 
+
+### T-Tests on Suspension Coils
+![Getting Started](./Manufacturing_lots.png)
 
 
+![Getting Started](./T_suspensioncoil.png)
+
+
+### Study Design: MechaCar vs Competition.
+Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+In your description, address the following questions:
+What metric or metrics are you going to test?
+What is the null hypothesis or alternative hypothesis?
+What statistical test would you use to test the hypothesis? And why?
+What data is needed to run the statistical test?
