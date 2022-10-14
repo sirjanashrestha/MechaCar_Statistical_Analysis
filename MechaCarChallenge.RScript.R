@@ -14,16 +14,7 @@ summary(lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,
 
 model<-lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,data=Mechacardf)
 
-# Determine y-axis values from linear model
-yvals <- model$coefficients['vehicle_length']*Mechacardf$vehicle_length +model$coefficients['vehicle_weight']*Mechacardf$vehicle_weight+
-  model$coefficients['spoiler_angle']*Mechacardf$spoiler_angle+model$coefficients['ground_clearance']*Mechacardf$ground_clearance+
-  model$coefficients['AWD']*Mechacardf$AWD+model$coefficients['(Intercept)']
 
-# Import dataset into ggplot2
-plt <- ggplot(Mechacardf,aes(x=mpg,y=))
-
-# Plot scatter and linear model
-> plt + geom_point() + geom_line(aes(y=yvals), color = "red") 
 
 # Deliverable 2
 # Create Visualizations for the Trip Analysis
